@@ -287,7 +287,7 @@ const OPS: React.FC = () => {
           >
           <Image
             className={activeButtons[item.label] ? 'w-0 h-0 rounded-full' : 'flex w-5 h-5 rounded-full justify-center items-center'} 
-            source="./assets/kiosk.png"
+            source={require('@/assets/images/ops/kiosk.png')}
           />
           </Pressable>
           <BottomSheet height={350} borderRadius={10} colorScheme='auto' sheetBackgroundColor="#E3F5F3" ref={bottomSheet}>
@@ -300,7 +300,7 @@ const OPS: React.FC = () => {
                 <GradientText width={200} height={30} style={{ fontSize: 20, fontWeight: "bold", textAlign: "center", marginBottom: 100 }} >{item.criteria}</GradientText>
                 <Image
                   className='w-14 h-14 rounded-full absolute -right-20 -top-5'
-                  source="./assets/kiosk.png"
+                  source={require('@/assets/images/ops/kiosk.png')}
                 />
                 <PsyncIcon width={30} height={30} />
                 <View className='mt-4'>
