@@ -1,4 +1,6 @@
-const buttonData = [
+import { ButtonData } from './types';
+
+export const buttonData: ButtonData = [
     { label: 'O', color: 'bg-blue-500', definition:'Observer', description: 'Stuck on info & pathways, not stuck on others point of view', criteria: "Look for negative reaction to talking about things over people", icon: require('@/assets/images/ops/icon.png') },
     { label: 'D', color: 'bg-orange-300', definition:'Decider', description: 'Stuck on people, judgment, fairness, not stuck on missing info', criteria: "Look for a more serious voice when dealing with people", icon: require('@/assets/images/ops/icon.png') },
     { label: 'Di', color: 'bg-blue-500', definition:'Looks Inward for Decisions', description: 'Me-story, what I want, I\'m allowed, leaves the tribe behind', criteria: "Watch for 'my way' even if other people are involved in the stories.", icon: require('@/assets/images/ops/icon.png') },
@@ -31,14 +33,39 @@ const buttonData = [
     ['Info', 'Energy'],
     ['I', 'E']
   ];
-  
-  export const observers = ["Ni", "Si", "Ne", "Se"];
-  export const deciders = ["Fi", "Ti", "Fe", "Te"];
-  export const de = ["Te", "Fe"];
-  export const di = ["Ti", "Fi"];
-  export const oi = ["Si", "Ni"];
-  export const oe = ["Se", "Ne"];
-  export const n = ["Ni", "Ne"];
-  export const s = ["Si", "Se"];
-  export const f = ["Fi", "Fe"];
-  export const t = ["Ti", "Te"];
+
+  export const columns = {
+    "SC/B(p)": ["Fi/Ni", "Fi/Si", "Ni/Fi", "Ni/Ti", "Si/Fi", "Si/Ti", "Ti/Ni", "Ti/Si"],
+    "SC/P(b)": ["Fi/Ni", "Fi/Si", "Ni/Fi", "Ni/Ti", "Si/Fi", "Si/Ti", "Ti/Ni", "Ti/Si"],
+    "SB/C(p)": ["Fi/Ni", "Fi/Si", "Ni/Fi", "Ni/Ti", "Si/Fi", "Si/Ti", "Ti/Ni", "Ti/Si"],
+    "SB/P(c)": ["Fi/Ni", "Fi/Si", "Ni/Fi", "Ni/Ti", "Si/Fi", "Si/Ti", "Ti/Ni", "Ti/Si"],
+    "CS/B(p)": ["Fi/Ne", "Fi/Se", "Ti/Ne", "Ti/Se", "Ne/Fi", "Ne/Ti", "Se/Fi", "Se/Fi"],
+    "CS/P(b)": ["Fi/Ne", "Fi/Se", "Ti/Ne", "Ti/Se", "Ne/Fi", "Ne/Ti", "Se/Fi", "Se/Fi"],
+    "CP/S(b)": ["Fi/Ne", "Fi/Se", "Ti/Ne", "Ti/Se", "Ne/Fi", "Ne/Ti", "Se/Fi", "Se/Fi"],
+    "CP/B(s)": ["Fi/Ne", "Fi/Se", "Ti/Ne", "Ti/Se", "Ne/Fi", "Ne/Ti", "Se/Fi", "Se/Fi"],
+    "BS/C(p)": ["Ni/Fe", "Ni/Te", "Si/Fe", "Si/Te", "Fe/Ni", "Fe/Si", "Te/Ni", "Te/Si"],
+    "BS/P(c)": ["Ni/Fe", "Ni/Te", "Si/Fe", "Si/Te", "Fe/Ni", "Fe/Si", "Te/Ni", "Te/Si"],
+    "BP/S(c)": ["Ni/Fe", "Ni/Te", "Si/Fe", "Si/Te", "Fe/Ni", "Fe/Si", "Te/Ni", "Te/Si"],
+    "BP/C(s)": ["Ni/Fe", "Ni/Te", "Si/Fe", "Si/Te", "Fe/Ni", "Fe/Si", "Te/Ni", "Te/Si"],
+    "PC/S(b)": ["Fe/Ne", "Fe/Se", "Ne/Fe", "Ne/Te", "Se/Fe", "Se/Te", "Te/Ne", "Te/Se"],
+    "PC/B(s)": ["Fe/Ne", "Fe/Se", "Ne/Fe", "Ne/Te", "Se/Fe", "Se/Te", "Te/Ne", "Te/Se"],
+    "PB/S(c)": ["Fe/Ne", "Fe/Se", "Ne/Fe", "Ne/Te", "Se/Fe", "Se/Te", "Te/Ne", "Te/Se"],
+    "PB/C(s)": ["Fe/Ne", "Fe/Se", "Ne/Fe", "Ne/Te", "Se/Fe", "Se/Te", "Te/Ne", "Te/Se"]
+  };
+
+  // Helper function to create element button
+const elementButton = (value: string) => ({
+  text: value,
+  onPress: () => console.log(`Pressed ${value}`)
+});
+
+// Create tableHead and tableData as simple strings instead of button objects
+export const tableHead = ['         ', ...Object.keys(columns)];
+
+export const tableData = Array.from({ length: 8 }, (_, rowIndex) => {
+  const row = [`${rowIndex + 1}`];  // Simple string instead of button object
+  Object.values(columns).forEach(column => {
+    row.push(column[rowIndex] || '');  // Simple string instead of button object
+  });
+  return row;
+});

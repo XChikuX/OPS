@@ -2,10 +2,11 @@ import React from 'react';
 import { View, Text } from 'react-native';
 import Animated, { FadeInUp, FadeOutUp, LinearTransition } from 'react-native-reanimated';
 import Ripple from 'react-native-material-ripple';
+import { ActiveButtonsState, ButtonData } from '@/components/OPS/types';
 
 type ButtonDescriptionProps = {
   activeButtons: ActiveButtonsState;
-  buttonData: typeof buttonData;
+  buttonData: ButtonData;
 };
 
 export const ButtonDescription: React.FC<ButtonDescriptionProps> = ({ activeButtons, buttonData }) => (
