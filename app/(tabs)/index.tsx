@@ -1,9 +1,11 @@
-import { Image, Platform } from 'react-native';
+import {Image, Platform } from 'react-native';
 
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
+
+import LikeIcon from '@/assets/images/svg/like.svg';
 
 export default function HomeScreen() {
   return (
@@ -16,9 +18,10 @@ export default function HomeScreen() {
           className="absolute bottom-0 left-0 h-[70%] w-[80%]"
         />
         <Image
-          source={require('../../assets/images/ops/kiosk.png')}
+          source={require('@/assets/images/ops/kiosk.png')}
           className="absolute top-5 right-5 h-[15%] w-[10%]"
         />
+        <LikeIcon className='w-20' />
         </>
       }>
       <ThemedView className="flex-row items-center gap-2">
