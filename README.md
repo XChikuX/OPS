@@ -1,4 +1,4 @@
-# Psync - Frontend
+# OPS - Frontend
 
 ## Prerequsites:
 
