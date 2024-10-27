@@ -1,50 +1,89 @@
-# Welcome to your Expo app 👋
+# Psync - Frontend
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## Prerequsites:
 
-## Get started
+### In Development machine
+1. [nodejs](https://nodejs.org/en/download/prebuilt-installer) LTS version > 20
+2. You may need the Android SDK for a virtual app. Xcode is not needed for IOS development.
+3. Yarn global - `npm install --global yarn`
+4. JDK 20 - For working with gradle [semi-optional]
 
-1. Install dependencies
+### For testing in android
+1. Expo Go app
+2. To be compatible with older versions of expo SDK use: [this](https://expo.dev/go)
+<br><b>Note:</b> Sometimes it is installed automatically if you have the device connected via adb and run the project. 
 
-   ```bash
-   npm install
-   ```
+### For testing in IOS
+1. Expo Go app
+<br><b>Note:</b> Download from app store and connect with the camera app.
+*************************************
 
-2. Start the app
+## To run the program
 
-   ```bash
-    npx expo start
-   ```
+PWD: Project Root dir
 
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+Step 1: Install all the required packages
+```sh
+yarn set version berry
+yarn config set nodeLinker node-modules
+yarn install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+**NOTE:** Ensure you remove `"packageManager": "yarn@4.x.x"` from the last line of package.json before commit.
 
-## Learn more
+Step 2: Make sure either you are running an android/IOS emulator or connected a device. 
+<br>For more information:
+<br>[Android Emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
+<br>[IOS Emulator](https://docs.expo.dev/workflow/ios-simulator/)
+<br>[USB connected android device](https://developer.android.com/studio/run/device#developer-device-options)
 
-To learn more about developing your project with Expo, look at the following resources:
+Step 3: Build and run the program<br>
+a. For Android
+<code>
+yarn start --android
+</code>
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+b. For IOS
+<code>
+yarn start --ios
+</code>
 
-## Join the community
+c. For Web
+<code>
+yarn start --web
+</code>
+*************************************
 
-Join our community of developers creating universal apps.
+###### yarn start
+This will start the expo server and you can scan the QR code to run the app on your device.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Press 's' to convert to expo mode
+
+Optionally, you may use the instructions in 'EAS server' to directly use a distribution build.
+
+Note: You will need to be on the same network as the server. Or hack your way in :p
+
+### EAS server
+
+Run `yarn prebuild` to generate the *android* folder.
+
+In the `./android` folder run `./gradlew clean`
+
+Then using the presets in `eas.json` you may run 
+
+```sh
+eas build --platform android --profile preview3 
+```
+
+**NOTE** for build to be successful in EAS you must add the below to `./android/build.gradle`
+
+```
+android {
+   packagingOptions {
+        pickFirst '**/libc++_shared.so'
+        pickFirst '**/libfbjni.so'
+        pickFirst '**/libcrypto.so'
+    }
+}
+```
+
