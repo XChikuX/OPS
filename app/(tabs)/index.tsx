@@ -1,4 +1,4 @@
-import {Image, Platform } from 'react-native';
+import {Image, View, Platform } from 'react-native';
 
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
@@ -13,15 +13,17 @@ export default function HomeScreen() {
       headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
       headerImage={
         <>
-        <Image
-          source={require('../../assets/images/partial-react-logo.png')}
-          className="absolute bottom-0 left-0 h-[70%] w-[80%]"
-        />
-        <Image
-          source={require('@/assets/images/ops/kiosk.png')}
-          className="absolute top-5 right-5 h-[15%] w-[10%]"
-        />
-        <LikeIcon className='w-20' />
+          <Image
+            source={require('../../assets/images/partial-react-logo.png')}
+            className="absolute bottom-0 left-0 h-[70%] w-[80%]"
+          />
+          <Image
+            source={require('@/assets/images/ops/kiosk.png')}
+            className="absolute top-5 right-5 h-[15%] w-[10%]"
+          />
+          
+          <LikeIcon className='absolute' /> 
+          
         </>
       }>
       <ThemedView className="flex-row items-center gap-2">
