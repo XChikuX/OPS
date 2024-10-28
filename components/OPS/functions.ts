@@ -1,0 +1,10 @@
+export const observers = ["Ni", "Si", "Ne", "Se"];
+export const deciders = ["Fi", "Ti", "Fe", "Te"];
+export const de = ["Te", "Fe"];
+export const di = ["Ti", "Fi"];
+export const oi = ["Si", "Ni"];
+export const oe = ["Se", "Ne"];
+export const n = ["Ni", "Ne"];
+export const s = ["Si", "Se"];
+export const f = ["Fi", "Fe"];
+export const t = ["Ti", "Te"];

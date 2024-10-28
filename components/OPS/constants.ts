@@ -34,6 +34,7 @@ export const buttonData: ButtonData = [
     ['I', 'E']
   ];
 
+
   export const columns = {
     "SC/B(p)": ["Fi/Ni", "Fi/Si", "Ni/Fi", "Ni/Ti", "Si/Fi", "Si/Ti", "Ti/Ni", "Ti/Si"],
     "SC/P(b)": ["Fi/Ni", "Fi/Si", "Ni/Fi", "Ni/Ti", "Si/Fi", "Si/Ti", "Ti/Ni", "Ti/Si"],
