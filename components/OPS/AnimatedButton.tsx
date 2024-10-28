@@ -19,16 +19,18 @@ export const AnimatedButton: React.FC<AnimatedButtonProps> = ({
       padding: isActive ? 2 : 0, 
       borderRadius: 35, 
       shadowColor: "#000", 
-      shadowOffset: { width: 0, height: 2 }, 
+      shadowOffset: { width: 0, height: 3 }, 
       shadowOpacity: 0.25, 
       shadowRadius: 3.84, 
       elevation: 5 
     }}
   >
     <TouchableOpacity
-      className={`relative w-full h-16 flex-row items-center justify-center text-center rounded-full ${
-        isActive ? 'bg-slate-900 h-14' : 'bg-violet-600 opacity-60'
-      }`}
+      className={`
+        relative flex flex-row items-center justify-center
+        w-full rounded-full
+        ${isActive ? 'h-14 bg-slate-900' : 'h-16 bg-violet-600/60'}
+      `}
       onPress={onPress}
       onLongPress={onLongPress}
       delayLongPress={300}

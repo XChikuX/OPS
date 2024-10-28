@@ -15,10 +15,10 @@ export const BottomSheetContent: React.FC<BottomSheetContentProps> = ({ criteria
     locations={[0, 1]}
     colors={['#4C407B', '#01010d']}
   >
-    <View className='flex items-center'>
+    <View className='flex relative items-center'>
       <GradientText width={200} height={30} style={{ fontSize: 20, fontWeight: "bold", textAlign: "center", marginBottom: 100 }} >{criteria}</GradientText>
       <Image
-        className='w-14 h-14 rounded-full absolute -right-20 -top-5'
+        className='w-5 h-5 rounded-full absolute'
         source={require('@/assets/images/ops/kiosk.png')}
       />
       <PsyncIcon width={30} height={30} />

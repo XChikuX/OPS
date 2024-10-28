@@ -1,4 +1,4 @@
-import { ButtonData } from './types';
+import { ButtonData, ColumnPatterns } from './types';
 
 export const buttonData: ButtonData = [
     { label: 'O', color: 'bg-blue-500', definition:'Observer', description: 'Stuck on info & pathways, not stuck on others point of view', criteria: "Look for negative reaction to talking about things over people", icon: require('@/assets/images/ops/icon.png') },
@@ -70,3 +70,10 @@ export const tableData = Array.from({ length: 8 }, (_, rowIndex) => {
   });
   return row;
 });
+
+export const REGEX_PATTERNS: ColumnPatterns = {
+  ENERGY: new RegExp('S.*P|P.*S'),
+  INFO: new RegExp('B.*C|C.*B'),
+  INTROVERT: new RegExp('S.*C|C.*S'),
+  EXTRAVERT: new RegExp('P.*B|B.*P'),
+} as const;

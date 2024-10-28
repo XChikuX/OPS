@@ -21,3 +21,10 @@ export type AnimatedButtonProps = {
     onLongPress: () => void;
     onInfoPress: () => void;
   };
+
+export interface ColumnPatterns {
+  ENERGY: RegExp;
+  INFO: RegExp;
+  INTROVERT: RegExp;
+  EXTRAVERT: RegExp;
+}
