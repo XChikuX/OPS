@@ -17,6 +17,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@0no-co/graphql.web@npm:^1.0.8":
+  version: 1.0.11
+  resolution: "@0no-co/graphql.web@npm:1.0.11"
+  peerDependencies:
+    graphql: ^14.0.0 || ^15.0.0 || ^16.0.0
+  peerDependenciesMeta:
+    graphql:
+      optional: true
+  checksum: 10c0/7ef7e86a750d3df666830705dac7c984bc7f9604a42c43840586931bb7d6c14499595beb6b8bdcfac56b7847f921ddd08f2e0c39b55acff49ec847d278a8a768
+  languageName: node
+  linkType: hard
+
 "@alloc/quick-lru@npm:^5.2.0":
   version: 5.2.0
   resolution: "@alloc/quick-lru@npm:5.2.0"
@@ -1401,29 +1413,30 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@expo/cli@npm:0.19.3":
-  version: 0.19.3
-  resolution: "@expo/cli@npm:0.19.3"
+"@expo/cli@npm:0.20.1":
+  version: 0.20.1
+  resolution: "@expo/cli@npm:0.20.1"
   dependencies:
+    "@0no-co/graphql.web": "npm:^1.0.8"
     "@babel/runtime": "npm:^7.20.0"
     "@expo/code-signing-certificates": "npm:^0.0.5"
-    "@expo/config": "npm:~10.0.0"
-    "@expo/config-plugins": "npm:~9.0.0"
+    "@expo/config": "npm:~10.0.2"
+    "@expo/config-plugins": "npm:~9.0.3"
     "@expo/devcert": "npm:^1.1.2"
     "@expo/env": "npm:~0.4.0"
     "@expo/image-utils": "npm:^0.6.0"
     "@expo/json-file": "npm:^9.0.0"
-    "@expo/metro-config": "npm:~0.19.0-preview.0"
+    "@expo/metro-config": "npm:~0.19.0-preview.2"
     "@expo/osascript": "npm:^2.0.31"
     "@expo/package-manager": "npm:^1.5.0"
     "@expo/plist": "npm:^0.2.0"
-    "@expo/prebuild-config": "npm:^8.0.0"
+    "@expo/prebuild-config": "npm:^8.0.9"
     "@expo/rudder-sdk-node": "npm:^1.1.1"
     "@expo/spawn-async": "npm:^1.7.2"
     "@expo/xcpretty": "npm:^4.3.0"
-    "@react-native/dev-middleware": "npm:0.76.0"
-    "@urql/core": "npm:^2.3.6"
-    "@urql/exchange-retry": "npm:0.3.0"
+    "@react-native/dev-middleware": "npm:0.76.1"
+    "@urql/core": "npm:^5.0.6"
+    "@urql/exchange-retry": "npm:^1.3.0"
     accepts: "npm:^1.3.8"
     arg: "npm:^5.0.2"
     better-opn: "npm:~3.0.2"
@@ -1442,8 +1455,6 @@ __metadata:
     fs-extra: "npm:~8.1.0"
     getenv: "npm:^1.0.0"
     glob: "npm:^10.4.2"
-    graphql: "npm:^15.8.0"
-    graphql-tag: "npm:^2.10.1"
     internal-ip: "npm:^4.3.0"
     is-docker: "npm:^2.0.0"
     is-wsl: "npm:^2.1.1"
@@ -1471,6 +1482,7 @@ __metadata:
     structured-headers: "npm:^0.4.1"
     tar: "npm:^6.2.1"
     temp-dir: "npm:^2.0.0"
+    tempy: "npm:^0.7.1"
     terminal-link: "npm:^2.1.1"
     undici: "npm:^6.18.2"
     unique-string: "npm:~2.0.0"
@@ -1478,7 +1490,7 @@ __metadata:
     ws: "npm:^8.12.1"
   bin:
     expo-internal: build/bin/cli
-  checksum: 10c0/5ebf537a64013de3e89b7506a7d3907f0a14a4f027b3003b5528d91ec1d2261a5774f40f8599c36190e723fa2b93ebc5efc6b996911e212ae710ad0481499385
+  checksum: 10c0/e11956c493bfaf889f7163b3e225bc7a2b8daea608096ccc96985310449a102d2448d764a93b5f4ac3e2b42bcade0392e3caac442eb24c792e4b941b1a6bd3c6
   languageName: node
   linkType: hard
 
@@ -1515,7 +1527,29 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@expo/config-plugins@npm:9.0.2, @expo/config-plugins@npm:~9.0.0":
+"@expo/config-plugins@npm:9.0.6, @expo/config-plugins@npm:~9.0.3":
+  version: 9.0.6
+  resolution: "@expo/config-plugins@npm:9.0.6"
+  dependencies:
+    "@expo/config-types": "npm:^52.0.0-preview.0"
+    "@expo/json-file": "npm:~9.0.0"
+    "@expo/plist": "npm:^0.2.0"
+    "@expo/sdk-runtime-versions": "npm:^1.0.0"
+    chalk: "npm:^4.1.2"
+    debug: "npm:^4.3.5"
+    getenv: "npm:^1.0.0"
+    glob: "npm:^10.4.2"
+    resolve-from: "npm:^5.0.0"
+    semver: "npm:^7.5.4"
+    slash: "npm:^3.0.0"
+    slugify: "npm:^1.6.6"
+    xcode: "npm:^3.0.1"
+    xml2js: "npm:0.6.0"
+  checksum: 10c0/82b0b0c77e9e14811811a939f42d396a7818456d64e59d5551261138eb99910a8b475e7f3761f073a979f6c7b7ed93392f4294d78205d450063c878ef4935824
+  languageName: node
+  linkType: hard
+
+"@expo/config-plugins@npm:~9.0.0":
   version: 9.0.2
   resolution: "@expo/config-plugins@npm:9.0.2"
   dependencies:
@@ -1551,9 +1585,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@expo/config@npm:10.0.1, @expo/config@npm:~10.0.0":
-  version: 10.0.1
-  resolution: "@expo/config@npm:10.0.1"
+"@expo/config@npm:10.0.2, @expo/config@npm:~10.0.2":
+  version: 10.0.2
+  resolution: "@expo/config@npm:10.0.2"
   dependencies:
     "@babel/code-frame": "npm:~7.10.4"
     "@expo/config-plugins": "npm:~9.0.0"
@@ -1568,7 +1602,7 @@ __metadata:
     semver: "npm:^7.6.0"
     slugify: "npm:^1.3.4"
     sucrase: "npm:3.35.0"
-  checksum: 10c0/5d4bf4953a301f265ec6987b0daccc396f9f9b2c19697f7aa33410ba9804686911aa5e32c0f6f6a1b94bcab2fdc5863c120dbe05557b70505c60878ba4778ef2
+  checksum: 10c0/c39d938951cadbba8496989eb4d14ffc5e5274bde70aa862614e073a11518f7d8ab26cdac310d246ed2110e746bc176654be5470be544bf8b624cbd6f6a632d0
   languageName: node
   linkType: hard
 
@@ -1588,6 +1622,27 @@ __metadata:
     slugify: "npm:^1.3.4"
     sucrase: "npm:3.34.0"
   checksum: 10c0/3ff42bed172be89652e0e3b1171e7acb20b28314b72cac3b26b1da53b0d6753485502ff1786e05c02ede312e3ff839732c2637ff828bdfe58bcbb91c1669f297
+  languageName: node
+  linkType: hard
+
+"@expo/config@npm:~10.0.0":
+  version: 10.0.1
+  resolution: "@expo/config@npm:10.0.1"
+  dependencies:
+    "@babel/code-frame": "npm:~7.10.4"
+    "@expo/config-plugins": "npm:~9.0.0"
+    "@expo/config-types": "npm:^52.0.0-preview.0"
+    "@expo/json-file": "npm:^9.0.0"
+    deepmerge: "npm:^4.3.1"
+    getenv: "npm:^1.0.0"
+    glob: "npm:^10.4.2"
+    require-from-string: "npm:^2.0.2"
+    resolve-from: "npm:^5.0.0"
+    resolve-workspace-root: "npm:^2.0.0"
+    semver: "npm:^7.6.0"
+    slugify: "npm:^1.3.4"
+    sucrase: "npm:3.35.0"
+  checksum: 10c0/5d4bf4953a301f265ec6987b0daccc396f9f9b2c19697f7aa33410ba9804686911aa5e32c0f6f6a1b94bcab2fdc5863c120dbe05557b70505c60878ba4778ef2
   languageName: node
   linkType: hard
 
@@ -1634,6 +1689,26 @@ __metadata:
     dotenv-expand: "npm:~11.0.6"
     getenv: "npm:^1.0.0"
   checksum: 10c0/4685ece5836e33e9ff8f08dbf28ef2f49d7eea6d206862e8ff7eefd30b303770d5e6523b7aa89c7d6f45be58070d34e412a95bd762d26ff5891dda054eb1f768
+  languageName: node
+  linkType: hard
+
+"@expo/fingerprint@npm:0.11.2":
+  version: 0.11.2
+  resolution: "@expo/fingerprint@npm:0.11.2"
+  dependencies:
+    "@expo/spawn-async": "npm:^1.7.2"
+    arg: "npm:^5.0.2"
+    chalk: "npm:^4.1.2"
+    debug: "npm:^4.3.4"
+    find-up: "npm:^5.0.0"
+    getenv: "npm:^1.0.0"
+    minimatch: "npm:^3.0.4"
+    p-limit: "npm:^3.1.0"
+    resolve-from: "npm:^5.0.0"
+    semver: "npm:^7.6.0"
+  bin:
+    fingerprint: bin/cli.js
+  checksum: 10c0/9f7ffd00819ed9bb2d88a6b31a1728fc67fd8c404b2ed1e75f4bfcdd4ae9a653d1dc28c26f264b7e6f46203160634b6c3ea8d127c7a5c249fc24f87d72b27253
   languageName: node
   linkType: hard
 
@@ -1721,7 +1796,33 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@expo/metro-config@npm:0.19.0-preview.2, @expo/metro-config@npm:~0.19.0-preview, @expo/metro-config@npm:~0.19.0-preview.0":
+"@expo/metro-config@npm:0.19.0-preview.3, @expo/metro-config@npm:~0.19.0-preview.2":
+  version: 0.19.0-preview.3
+  resolution: "@expo/metro-config@npm:0.19.0-preview.3"
+  dependencies:
+    "@babel/core": "npm:^7.20.0"
+    "@babel/generator": "npm:^7.20.5"
+    "@babel/parser": "npm:^7.20.0"
+    "@babel/types": "npm:^7.20.0"
+    "@expo/config": "npm:~10.0.0"
+    "@expo/env": "npm:~0.4.0"
+    "@expo/json-file": "npm:~9.0.0"
+    "@expo/spawn-async": "npm:^1.7.2"
+    chalk: "npm:^4.1.0"
+    debug: "npm:^4.3.2"
+    fs-extra: "npm:^9.1.0"
+    getenv: "npm:^1.0.0"
+    glob: "npm:^10.4.2"
+    jsc-safe-url: "npm:^0.2.4"
+    lightningcss: "npm:~1.27.0"
+    minimatch: "npm:^3.0.4"
+    postcss: "npm:~8.4.32"
+    resolve-from: "npm:^5.0.0"
+  checksum: 10c0/1a3a3c75857d0c84ffbcd4163628c2a8f5fb098a3ecf6067fda174e039ebcd1cc186ea2698fbc15d5e1ac053ca6e1ff063f7e9b9905d6c7cf3a9cbf8ca0b5e68
+  languageName: node
+  linkType: hard
+
+"@expo/metro-config@npm:~0.19.0-preview":
   version: 0.19.0-preview.2
   resolution: "@expo/metro-config@npm:0.19.0-preview.2"
   dependencies:
@@ -1850,7 +1951,28 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@expo/prebuild-config@npm:^8.0.0, @expo/prebuild-config@npm:~8.0.0":
+"@expo/prebuild-config@npm:^8.0.9":
+  version: 8.0.9
+  resolution: "@expo/prebuild-config@npm:8.0.9"
+  dependencies:
+    "@expo/config": "npm:~10.0.0"
+    "@expo/config-plugins": "npm:~9.0.0"
+    "@expo/config-types": "npm:^52.0.0-preview.0"
+    "@expo/image-utils": "npm:^0.6.0"
+    "@expo/json-file": "npm:^9.0.0"
+    "@react-native/normalize-colors": "npm:0.76.1"
+    debug: "npm:^4.3.1"
+    fs-extra: "npm:^9.0.0"
+    resolve-from: "npm:^5.0.0"
+    semver: "npm:^7.6.0"
+    xml2js: "npm:0.6.0"
+  peerDependencies:
+    expo-modules-autolinking: 2.0.0-preview.3
+  checksum: 10c0/9e25a71bb615e4e909bf61a6f67a6c66cf80944f81c8b4370850ca057d9fc72604e9f698128d0fe43249b86f68b1d56a027f1d4c89636d39e0f5ebace9a78fe7
+  languageName: node
+  linkType: hard
+
+"@expo/prebuild-config@npm:~8.0.0":
   version: 8.0.3
   resolution: "@expo/prebuild-config@npm:8.0.3"
   dependencies:
@@ -1965,7 +2087,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@graphql-typed-document-node/core@npm:^3.1.0, @graphql-typed-document-node/core@npm:^3.1.1":
+"@graphql-typed-document-node/core@npm:^3.1.0":
   version: 3.2.0
   resolution: "@graphql-typed-document-node/core@npm:3.2.0"
   peerDependencies:
@@ -2406,10 +2528,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-native/assets-registry@npm:0.76.0":
-  version: 0.76.0
-  resolution: "@react-native/assets-registry@npm:0.76.0"
-  checksum: 10c0/a8543167afbd2a2d63ec8518f41efddbb3de39ad5905cb98002fdfad7441ade6ae05d86321aea43e366fa9b2336a9bca67d14c89f064e5c7064cd98334ba82c0
+"@react-native/assets-registry@npm:0.76.1":
+  version: 0.76.1
+  resolution: "@react-native/assets-registry@npm:0.76.1"
+  checksum: 10c0/cab379c78de38c478a1bc2289df4becd6a3a7ac6f5a2da9f37fbb49a10662c1adf61b1da8a9282c380be66842c6b6c3a9d4df2ab69060e974e31f032a2795723
   languageName: node
   linkType: hard
 
@@ -2428,6 +2550,15 @@ __metadata:
   dependencies:
     "@react-native/codegen": "npm:0.76.0"
   checksum: 10c0/c1816b80c0cde1f48f91584f873ad5740669c6324c533239ccc7131fbbbc6b810ca2a0d7e8da21783e004a7dc2660b2501a868b4375ba835679eb05d1c239044
+  languageName: node
+  linkType: hard
+
+"@react-native/babel-plugin-codegen@npm:0.76.1":
+  version: 0.76.1
+  resolution: "@react-native/babel-plugin-codegen@npm:0.76.1"
+  dependencies:
+    "@react-native/codegen": "npm:0.76.1"
+  checksum: 10c0/382928aed967b56803e6598a123d6a2bb27dda2b175298f8afcd0a047c3d02172ac2d61e35a088500cb96caffa39fe18f9a8452dfd5818b05c281a59e81d6c83
   languageName: node
   linkType: hard
 
@@ -2539,6 +2670,61 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@react-native/babel-preset@npm:0.76.1":
+  version: 0.76.1
+  resolution: "@react-native/babel-preset@npm:0.76.1"
+  dependencies:
+    "@babel/core": "npm:^7.25.2"
+    "@babel/plugin-proposal-export-default-from": "npm:^7.24.7"
+    "@babel/plugin-syntax-dynamic-import": "npm:^7.8.3"
+    "@babel/plugin-syntax-export-default-from": "npm:^7.24.7"
+    "@babel/plugin-syntax-nullish-coalescing-operator": "npm:^7.8.3"
+    "@babel/plugin-syntax-optional-chaining": "npm:^7.8.3"
+    "@babel/plugin-transform-arrow-functions": "npm:^7.24.7"
+    "@babel/plugin-transform-async-generator-functions": "npm:^7.25.4"
+    "@babel/plugin-transform-async-to-generator": "npm:^7.24.7"
+    "@babel/plugin-transform-block-scoping": "npm:^7.25.0"
+    "@babel/plugin-transform-class-properties": "npm:^7.25.4"
+    "@babel/plugin-transform-classes": "npm:^7.25.4"
+    "@babel/plugin-transform-computed-properties": "npm:^7.24.7"
+    "@babel/plugin-transform-destructuring": "npm:^7.24.8"
+    "@babel/plugin-transform-flow-strip-types": "npm:^7.25.2"
+    "@babel/plugin-transform-for-of": "npm:^7.24.7"
+    "@babel/plugin-transform-function-name": "npm:^7.25.1"
+    "@babel/plugin-transform-literals": "npm:^7.25.2"
+    "@babel/plugin-transform-logical-assignment-operators": "npm:^7.24.7"
+    "@babel/plugin-transform-modules-commonjs": "npm:^7.24.8"
+    "@babel/plugin-transform-named-capturing-groups-regex": "npm:^7.24.7"
+    "@babel/plugin-transform-nullish-coalescing-operator": "npm:^7.24.7"
+    "@babel/plugin-transform-numeric-separator": "npm:^7.24.7"
+    "@babel/plugin-transform-object-rest-spread": "npm:^7.24.7"
+    "@babel/plugin-transform-optional-catch-binding": "npm:^7.24.7"
+    "@babel/plugin-transform-optional-chaining": "npm:^7.24.8"
+    "@babel/plugin-transform-parameters": "npm:^7.24.7"
+    "@babel/plugin-transform-private-methods": "npm:^7.24.7"
+    "@babel/plugin-transform-private-property-in-object": "npm:^7.24.7"
+    "@babel/plugin-transform-react-display-name": "npm:^7.24.7"
+    "@babel/plugin-transform-react-jsx": "npm:^7.25.2"
+    "@babel/plugin-transform-react-jsx-self": "npm:^7.24.7"
+    "@babel/plugin-transform-react-jsx-source": "npm:^7.24.7"
+    "@babel/plugin-transform-regenerator": "npm:^7.24.7"
+    "@babel/plugin-transform-runtime": "npm:^7.24.7"
+    "@babel/plugin-transform-shorthand-properties": "npm:^7.24.7"
+    "@babel/plugin-transform-spread": "npm:^7.24.7"
+    "@babel/plugin-transform-sticky-regex": "npm:^7.24.7"
+    "@babel/plugin-transform-typescript": "npm:^7.25.2"
+    "@babel/plugin-transform-unicode-regex": "npm:^7.24.7"
+    "@babel/template": "npm:^7.25.0"
+    "@react-native/babel-plugin-codegen": "npm:0.76.1"
+    babel-plugin-syntax-hermes-parser: "npm:^0.23.1"
+    babel-plugin-transform-flow-enums: "npm:^0.0.2"
+    react-refresh: "npm:^0.14.0"
+  peerDependencies:
+    "@babel/core": "*"
+  checksum: 10c0/3c39636684aaa0c9f23a96e83e657307c7e94bdf61fd12eaaf7a9446c19ea9225e4556c987a3afb5d472b7d6191af6f5c1c6cbd80f51f287d0b63f0c590d83ee
+  languageName: node
+  linkType: hard
+
 "@react-native/codegen@npm:0.74.87":
   version: 0.74.87
   resolution: "@react-native/codegen@npm:0.74.87"
@@ -2571,6 +2757,24 @@ __metadata:
   peerDependencies:
     "@babel/preset-env": ^7.1.6
   checksum: 10c0/0cdad654b4f4b86ad526188f5adda59dd9f1b38057749580c72e21e58b1183d8e7593fc7b8614dd1330b101fd4418d2f96d4c0e5af70ad2f2fc1639b1832d76f
+  languageName: node
+  linkType: hard
+
+"@react-native/codegen@npm:0.76.1":
+  version: 0.76.1
+  resolution: "@react-native/codegen@npm:0.76.1"
+  dependencies:
+    "@babel/parser": "npm:^7.25.3"
+    glob: "npm:^7.1.1"
+    hermes-parser: "npm:0.23.1"
+    invariant: "npm:^2.2.4"
+    jscodeshift: "npm:^0.14.0"
+    mkdirp: "npm:^0.5.1"
+    nullthrows: "npm:^1.1.1"
+    yargs: "npm:^17.6.2"
+  peerDependencies:
+    "@babel/preset-env": ^7.1.6
+  checksum: 10c0/087e763df614590754f3790d35eabd8e26fdc076be41e9c39708844bd690d91163914b62f96fd1df4086214db3f9f9a01cda97bc32188ce245e1f86452da3895
   languageName: node
   linkType: hard
 
@@ -2608,6 +2812,13 @@ __metadata:
   version: 0.76.0
   resolution: "@react-native/debugger-frontend@npm:0.76.0"
   checksum: 10c0/115db2f3fab68791606bea674718fb96ed684754f346a4d3e12f44f2486cb0bb0935c6c7bce318bcf5be8010eca4e111e0ae74a591c8f845d0e106a5ecac2dbf
+  languageName: node
+  linkType: hard
+
+"@react-native/debugger-frontend@npm:0.76.1":
+  version: 0.76.1
+  resolution: "@react-native/debugger-frontend@npm:0.76.1"
+  checksum: 10c0/7fc49ae2625f6166facd19ef61f6b68771576414936c7330f74d04da9ff37152c3ef673266690277953fdc8e20b8cae191d69913e39d67eae69ff784b72e2f99
   languageName: node
   linkType: hard
 
@@ -2651,6 +2862,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@react-native/dev-middleware@npm:0.76.1":
+  version: 0.76.1
+  resolution: "@react-native/dev-middleware@npm:0.76.1"
+  dependencies:
+    "@isaacs/ttlcache": "npm:^1.4.1"
+    "@react-native/debugger-frontend": "npm:0.76.1"
+    chrome-launcher: "npm:^0.15.2"
+    chromium-edge-launcher: "npm:^0.2.0"
+    connect: "npm:^3.6.5"
+    debug: "npm:^2.2.0"
+    nullthrows: "npm:^1.1.1"
+    open: "npm:^7.0.3"
+    selfsigned: "npm:^2.4.1"
+    serve-static: "npm:^1.13.1"
+    ws: "npm:^6.2.3"
+  checksum: 10c0/c60c6b003df7903fe288a09d28bd1fbc5ce014778b71c5059f3605f941463e36949804b09d8980d3be345768b9cc0e5eccd69653d7e3d6361a237d3ad6f5e2b2
+  languageName: node
+  linkType: hard
+
 "@react-native/gradle-plugin@npm:0.76.0":
   version: 0.76.0
   resolution: "@react-native/gradle-plugin@npm:0.76.0"
@@ -2690,6 +2920,13 @@ __metadata:
   version: 0.76.0
   resolution: "@react-native/normalize-colors@npm:0.76.0"
   checksum: 10c0/4218ef1f785ab5f4d9fe29a314abdce9e1ba5a193cb8b0f2c8fa821bb72c33c54548bda2128c6de488f055898e407e8553db1adecd6cbe34503f2b55e9e35c0f
+  languageName: node
+  linkType: hard
+
+"@react-native/normalize-colors@npm:0.76.1":
+  version: 0.76.1
+  resolution: "@react-native/normalize-colors@npm:0.76.1"
+  checksum: 10c0/44a3849de811cf91481339321e644566a5c1971bc276df46b608431926c70a00bf30c3bd7b2a81032ca6e88d57a39ae6630e8c6afdc6782383ecea44eeba2f84
   languageName: node
   linkType: hard
 
@@ -3389,25 +3626,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@urql/core@npm:>=2.3.1":
+"@urql/core@npm:>=2.3.1, @urql/core@npm:^5.0.0, @urql/core@npm:^5.0.6":
   version: 5.0.8
   resolution: "@urql/core@npm:5.0.8"
   dependencies:
     "@0no-co/graphql.web": "npm:^1.0.5"
     wonka: "npm:^6.3.2"
   checksum: 10c0/a17c5ca0e2f02657e57bfc0b567dc6075f27e6604a27baf65d26df9c01007ff6f552b496c33fd9b3eb121485d8b82029a2d860fd82c156dfed52abbb341c78ed
-  languageName: node
-  linkType: hard
-
-"@urql/core@npm:^2.3.6":
-  version: 2.6.1
-  resolution: "@urql/core@npm:2.6.1"
-  dependencies:
-    "@graphql-typed-document-node/core": "npm:^3.1.1"
-    wonka: "npm:^4.0.14"
-  peerDependencies:
-    graphql: ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
-  checksum: 10c0/2b08658227b3f7959f2e1c2af956e296fff9ca80d1f79477987495c7922774bfcee13c6fc4bf4b7eda08c9db3d761350fe84b361f2631c12feede0d910abd5b7
   languageName: node
   linkType: hard
 
@@ -3420,6 +3645,18 @@ __metadata:
   peerDependencies:
     graphql: ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0
   checksum: 10c0/6ea0ecbc56de94f228627d06cd084b5d71d605884a68b3f7f03873ac538c290f9500e67938635650edd7f32e53dfa9c4b6e38f5aa8fd48f061b6135c42f3a204
+  languageName: node
+  linkType: hard
+
+"@urql/exchange-retry@npm:^1.3.0":
+  version: 1.3.0
+  resolution: "@urql/exchange-retry@npm:1.3.0"
+  dependencies:
+    "@urql/core": "npm:^5.0.0"
+    wonka: "npm:^6.3.2"
+  peerDependencies:
+    "@urql/core": ^5.0.0
+  checksum: 10c0/4a4e54fbf21b7bd221e9d29acd885b16b154f3660aab4ce5bc257b0093a4aebe1dab4efe692127b43751359ea0c5aa11320a8f422236d22e54918e1637b6b248
   languageName: node
   linkType: hard
 
@@ -3977,9 +4214,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"babel-preset-expo@npm:~12.0.0-preview.1":
-  version: 12.0.0-preview.1
-  resolution: "babel-preset-expo@npm:12.0.0-preview.1"
+"babel-preset-expo@npm:~12.0.0-preview.5":
+  version: 12.0.0-preview.5
+  resolution: "babel-preset-expo@npm:12.0.0-preview.5"
   dependencies:
     "@babel/plugin-proposal-decorators": "npm:^7.12.9"
     "@babel/plugin-transform-export-namespace-from": "npm:^7.22.11"
@@ -3987,7 +4224,7 @@ __metadata:
     "@babel/plugin-transform-parameters": "npm:^7.22.15"
     "@babel/preset-react": "npm:^7.22.15"
     "@babel/preset-typescript": "npm:^7.23.0"
-    "@react-native/babel-preset": "npm:0.76.0"
+    "@react-native/babel-preset": "npm:0.76.1"
     babel-plugin-react-native-web: "npm:~0.19.13"
     react-refresh: "npm:^0.14.2"
   peerDependencies:
@@ -3998,7 +4235,7 @@ __metadata:
       optional: true
     react-compiler-runtime:
       optional: true
-  checksum: 10c0/369f64aae8c94fc6088f445852dcb9a9081d817db4217a7fc5c6f17f42ecafa22bcd27e33c7b5f079f959a659c7ab2204e5fb7e140ee0ad89ad57506c671193d
+  checksum: 10c0/5a7d5c42f186f652b754799c444e7c9a955814f772cdb138d53b83ca7be60f07a3cc77468923ddfe07e7af46cb47e864accbf84efc621d9aebee5445759178d4
   languageName: node
   linkType: hard
 
@@ -5799,12 +6036,39 @@ __metadata:
   languageName: node
   linkType: hard
 
+"expo-font@npm:~13.0.1":
+  version: 13.0.1
+  resolution: "expo-font@npm:13.0.1"
+  dependencies:
+    fontfaceobserver: "npm:^2.1.0"
+  peerDependencies:
+    expo: "*"
+    react: "*"
+  checksum: 10c0/f53737b8a44db9778e03b99f0ad5dd218a1692a78f856bee6cc31c0b960372735ffad05bb7e30d54ec6db17a7cfad83f315a6c90f50ae063f84b15b075943255
+  languageName: node
+  linkType: hard
+
 "expo-haptics@npm:~14.0.0":
   version: 14.0.0
   resolution: "expo-haptics@npm:14.0.0"
   peerDependencies:
     expo: "*"
   checksum: 10c0/6bfbaf9365dd53127d8cc43f6167b6373520ef029d7f62d3f2599bf326a4ed137dfd8163ded21c97eb80555a091068bb6674529e04e2a31e4d89fe23e92f41a1
+  languageName: node
+  linkType: hard
+
+"expo-image@npm:~2.0.0-preview.1":
+  version: 2.0.0-preview.1
+  resolution: "expo-image@npm:2.0.0-preview.1"
+  peerDependencies:
+    expo: "*"
+    react: "*"
+    react-native: "*"
+    react-native-web: "*"
+  peerDependenciesMeta:
+    react-native-web:
+      optional: true
+  checksum: 10c0/ebbfd1f28d7227912de916b4cfdb373adde55f3bea6dbbb76a64fccc453efc90e664fb8f5970d1200a921c63ae00735c19724c5982db1b203bc34a4dc02fcdae
   languageName: node
   linkType: hard
 
@@ -5887,9 +6151,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"expo-modules-autolinking@npm:2.0.0-preview.1":
-  version: 2.0.0-preview.1
-  resolution: "expo-modules-autolinking@npm:2.0.0-preview.1"
+"expo-modules-autolinking@npm:2.0.0-preview.3":
+  version: 2.0.0-preview.3
+  resolution: "expo-modules-autolinking@npm:2.0.0-preview.3"
   dependencies:
     "@expo/spawn-async": "npm:^1.7.2"
     chalk: "npm:^4.1.0"
@@ -5901,7 +6165,7 @@ __metadata:
     resolve-from: "npm:^5.0.0"
   bin:
     expo-modules-autolinking: bin/expo-modules-autolinking.js
-  checksum: 10c0/144e5064a66004932a40ade38bee51a29aca94c2d9ce82a0143b9a76b363e0da0f7be4d49bcd3aa319fc889b9c66932f345c06563f6109c6fc689d41afb494d9
+  checksum: 10c0/4d0bf44a4d81f39845170b2cccd275fdef6d112822f07fa592f46bbd3e9dc220380ce1480ee32cf9c072af62bd3c153c4699319d5f841b311dfd84867e46a67f
   languageName: node
   linkType: hard
 
@@ -5914,12 +6178,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"expo-modules-core@npm:2.0.0-preview.4":
-  version: 2.0.0-preview.4
-  resolution: "expo-modules-core@npm:2.0.0-preview.4"
+"expo-modules-core@npm:2.0.0-preview.9":
+  version: 2.0.0-preview.9
+  resolution: "expo-modules-core@npm:2.0.0-preview.9"
   dependencies:
     invariant: "npm:^2.2.4"
-  checksum: 10c0/6f5bd550596a7e1ecb58dfb0a0aa71639ab703a37b128d11d7cb34840bb75294284d8a91035479132b3dfee9d2a3b78cf93cbc8bdec8a018221a192faa18e113
+  checksum: 10c0/2423de219a982539124028620e8d1db972fc03ffb8fcc44da884886500d2d69221edc23992cf7390e1da8afcfa1b2a210f5c9bb7c6658572feca4a478240c432
   languageName: node
   linkType: hard
 
@@ -6051,23 +6315,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"expo@npm:~52.0.0-preview.5":
-  version: 52.0.0-preview.5
-  resolution: "expo@npm:52.0.0-preview.5"
+"expo@npm:~52.0.0-preview.21":
+  version: 52.0.0-preview.21
+  resolution: "expo@npm:52.0.0-preview.21"
   dependencies:
     "@babel/runtime": "npm:^7.20.0"
-    "@expo/cli": "npm:0.19.3"
-    "@expo/config": "npm:10.0.1"
-    "@expo/config-plugins": "npm:9.0.2"
-    "@expo/metro-config": "npm:0.19.0-preview.2"
+    "@expo/cli": "npm:0.20.1"
+    "@expo/config": "npm:10.0.2"
+    "@expo/config-plugins": "npm:9.0.6"
+    "@expo/fingerprint": "npm:0.11.2"
+    "@expo/metro-config": "npm:0.19.0-preview.3"
     "@expo/vector-icons": "npm:^14.0.0"
-    babel-preset-expo: "npm:~12.0.0-preview.1"
+    babel-preset-expo: "npm:~12.0.0-preview.5"
     expo-asset: "npm:~11.0.0"
     expo-file-system: "npm:~18.0.0"
-    expo-font: "npm:~13.0.0"
+    expo-font: "npm:~13.0.1"
     expo-keep-awake: "npm:~14.0.1"
-    expo-modules-autolinking: "npm:2.0.0-preview.1"
-    expo-modules-core: "npm:2.0.0-preview.4"
+    expo-modules-autolinking: "npm:2.0.0-preview.3"
+    expo-modules-core: "npm:2.0.0-preview.9"
     fbemitter: "npm:^3.0.0"
     web-streams-polyfill: "npm:^3.3.2"
     whatwg-url-without-unicode: "npm:8.0.0-3"
@@ -6086,7 +6351,7 @@ __metadata:
       optional: true
   bin:
     expo: bin/cli
-  checksum: 10c0/9415eb782e52a555238a4870cd163c08cfdcb6707a2878b1c6c1d57ba4f65fca07af4c2de4329c735a2e3bec65bbc78e65934b3f51a35383e8af21e9dba33a38
+  checksum: 10c0/d72c38630f8a1503a256612f75b8fb6be0dfdcee72aaa1e43a8bb8760364ed6ca2d67abe08a91b864ef3ad382e9c0d9fae5ef44f7eb6dcf86da26f8f57c44de8
   languageName: node
   linkType: hard
 
@@ -6654,13 +6919,6 @@ __metadata:
   version: 15.8.0
   resolution: "graphql@npm:15.8.0"
   checksum: 10c0/30cc09b77170a9d1ed68e4c017ec8c5265f69501c96e4f34f8f6613f39a886c96dd9853eac925f212566ed651736334c8fe24ceae6c44e8d7625c95c3009a801
-  languageName: node
-  linkType: hard
-
-"graphql@npm:^15.8.0":
-  version: 15.9.0
-  resolution: "graphql@npm:15.9.0"
-  checksum: 10c0/0e93f7138daae07dcb0713ce5e2ae7f8039e911b6180f0170c4929664ec32ab8e690a9ea12be2dc4ab18544f9898989765122f30d2d07d38b0ce2a4c839d29bc
   languageName: node
   linkType: hard
 
@@ -9584,12 +9842,13 @@ __metadata:
     "@types/react": "npm:~18.3.12"
     "@types/react-native-material-ripple": "npm:^0.9.6"
     "@types/react-test-renderer": "npm:^18.3.0"
-    expo: "npm:~52.0.0-preview.5"
+    expo: "npm:~52.0.0-preview.21"
     expo-blur: "npm:~14.0.1"
     expo-constants: "npm:~17.0.1"
     expo-dev-client: "npm:~5.0.0-preview.2"
     expo-font: "npm:~13.0.0"
     expo-haptics: "npm:~14.0.0"
+    expo-image: "npm:~2.0.0-preview.1"
     expo-linear-gradient: "npm:~14.0.1"
     expo-linking: "npm:~7.0.2"
     expo-router: "npm:~4.0.0-preview.3"
