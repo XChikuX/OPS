@@ -14,8 +14,7 @@
     "prebuild": "npx expo prebuild"
   },
   "resolutions": {
-    "browserify-sign": "4.2.2",
-    "@react-native/assets-registry": "^0.76.3"
+    "browserify-sign": "4.2.2"
   },
   "jest": {
     "preset": "react-native",
@@ -34,7 +33,7 @@
     "@react-native-masked-view/masked-view": "0.3.2",
     "@react-navigation/drawer": "7.0.0-rc.31",
     "@react-navigation/native": "7.0.0-rc.20",
-    "expo": "^52.0.11",
+    "expo": "^53.0.9",
     "expo-blur": "~14.0.1",
     "expo-constants": "~17.0.3",
     "expo-dev-client": "~5.0.4",
@@ -80,5 +79,6 @@
     "react-test-renderer": "18.3.1",
     "typescript": "~5.6.3"
   },
-  "private": true
+  "private": true,
+  "packageManager": "yarn@4.9.4"
 }
