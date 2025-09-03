@@ -32,6 +32,7 @@
       "developmentClient": true,
       "distribution": "internal",
       "env": {
+        "EAS_BUILD_ENABLE_COREPACK": "true",
         "EXPO_NO_FROZEN_LOCKFILE": "1",
         "YARN_VERSION": "4",
         "YARN_ENABLE_INLINE_BUILDS": "true"
