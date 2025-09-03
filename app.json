@@ -2,14 +2,13 @@
   "expo": {
     "name": "OPS",
     "slug": "OPS",
-    "version": "1.0.0",
+    "version": "0.1.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
-    "scheme": "myapp",
+    "icon": "./assets/images/ops/OP.jpg",
+    "scheme": "psync",
     "userInterfaceStyle": "automatic",
-    "newArchEnabled": true,
     "splash": {
-      "image": "./assets/images/splash.png",
+      "image": "./assets/images/ops/OP-splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -18,15 +17,15 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "foregroundImage": "./assets/images/ops/OP.jpg",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.xchikux.OPS"
+      "package": "club.psync.ops"
     },
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "./assets/images/ops/OPS.jpeg"
     },
     "plugins": [
       "expo-router",
