@@ -8,7 +8,7 @@
     "scheme": "psync",
     "userInterfaceStyle": "automatic",
     "splash": {
-      "image": "./assets/images/ops/OP-splash.png",
+      "image": "./assets/images/ops/OP-splash.jpg",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
