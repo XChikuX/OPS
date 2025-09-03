@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Stack & Architecture
 
-- **Framework**: Expo SDK 53 (React Native + Expo Router v4)
+- **Framework**: Expo SDK 54 (React Native + Expo Router v6)
 - **Languages**: TypeScript (strict mode)
 - **Styling**: NativeWind (Tailwind CSS for React Native)
 - **Package Manager**: Yarn 4 (Berry) with node-modules linking

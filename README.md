@@ -37,22 +37,6 @@ Step 2: Make sure either you are running an android/IOS emulator or connected a 
 <br>[IOS Emulator](https://docs.expo.dev/workflow/ios-simulator/)
 <br>[USB connected android device](https://developer.android.com/studio/run/device#developer-device-options)
 
-Step 3: Build and run the program<br>
-a. For Android
-<code>
-yarn start --android
-</code>
-
-b. For IOS
-<code>
-yarn start --ios
-</code>
-
-c. For Web
-<code>
-yarn start --web
-</code>
-*************************************
 
 ###### yarn start
 This will start the expo server and you can scan the QR code to run the app on your device.
@@ -74,16 +58,3 @@ Then using the presets in `eas.json` you may run
 ```sh
 eas build --platform android --profile preview3 
 ```
-
-**NOTE** for build to be successful in EAS you must add the below to `./android/build.gradle`
-
-```
-android {
-   packagingOptions {
-        pickFirst '**/libc++_shared.so'
-        pickFirst '**/libfbjni.so'
-        pickFirst '**/libcrypto.so'
-    }
-}
-```
-

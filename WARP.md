@@ -4,7 +4,7 @@ This file provides guidance to WARP (warp.dev) when working with code in this re
 ``
 
 Repository profile
-- Stack: Expo (React Native + Expo Router v4), TypeScript, NativeWind (Tailwind for RN), Yarn 4 (Berry)
+- Stack: Expo (React Native + Expo Router v6), TypeScript, NativeWind (Tailwind for RN), Yarn 4 (Berry)
 - Entry: expo-router/entry via package.json
 - Platforms: Android, iOS, Web
 - Notable configs: app.json, babel.config.js, metro.config.js, tsconfig.json, eas.json
@@ -53,17 +53,10 @@ EAS builds (cloud)
 - Generate native projects first if needed: yarn prebuild
 - Use the provided EAS profiles in eas.json. Example (Android APK dev client):
   - eas build --platform android --profile preview3
-- Important Android note (from README): add to ./android/build.gradle if you hit duplicate .so errors during EAS builds:
-  android {
-     packagingOptions {
-       pickFirst '**/libc++_shared.so'
-       pickFirst '**/libfbjni.so'
-       pickFirst '**/libcrypto.so'
-     }
-  }
+
 
 High-level architecture and structure
-Routing and screens (Expo Router v4)
+Routing and screens (Expo Router v6)
 - app/ directory defines routes. Key patterns:
   - app/_layout.tsx: root layout
   - app/(tabs)/_layout.tsx and siblings: tabbed sub-tree (e.g., index.tsx, explore.tsx)
