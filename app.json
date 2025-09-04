@@ -28,9 +28,6 @@
       "favicon": "./assets/images/ops/OPS.jpeg"
     },
     "plugins": [
-      "expo-router",
-      "expo-font",
-      "expo-web-browser"
     ],
     "experiments": {
       "typedRoutes": true
