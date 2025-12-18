@@ -2,15 +2,15 @@ import React, { useRef, useEffect, useState, useMemo } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { Drawer } from 'react-native-drawer-layout';
 import { LinearGradient } from 'expo-linear-gradient';
-import { 
-  Text, 
-  View, 
-  AppRegistry, 
-  SafeAreaView, 
-  ScrollView, 
+import {
+  Text,
+  View,
+  AppRegistry,
+  ScrollView,
   Pressable,
-  Button 
+  Button
 } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import * as Haptics from 'expo-haptics';
 import { BottomSheet, BottomSheetRef } from 'react-native-sheet';
 import { MenuProvider } from 'react-native-popup-menu';
@@ -86,7 +86,7 @@ const OPS: React.FC = () => {
       start={{ x: 1.5, y: 0.2 }}
       colors={["#33196B", "#4C407B"]}
     >
-      <SafeAreaView className="flex-1">
+      <SafeAreaView edges={['top', 'left', 'right']} className="flex-1">
         <ScrollView contentContainerStyle={{ flexGrow: 1, justifyContent: 'center', alignItems: 'center' }}>
           <HelloWave />
         </ScrollView>
@@ -134,7 +134,7 @@ const OPS: React.FC = () => {
         onClose={() => setIsOpen(false)}
         renderDrawerContent={DrawerContent}
       >
-        <SafeAreaView className="top-20">
+        <SafeAreaView edges={['top', 'left', 'right']} className="top-20">
           <View className="flex justify-center items-center mb-10">
             <GradientText className="text-3xl font-bold">
               Objective Personality Tool
@@ -181,8 +181,8 @@ const OPS: React.FC = () => {
               </Pressable>
 
               <Button
+                title={isOpen ? 'Close drawer' : 'Open drawer'}
                 onPress={() => setIsOpen((prevOpen) => !prevOpen)}
-                title={`${isOpen ? 'Close' : 'Open'} drawer`}
               />
 
               <View className='mb-56'>
