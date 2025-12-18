@@ -1,38 +1,17 @@
 {
   "cli": {
     "version": ">=16.0",
-    "appVersionSource": "remote"
+    "appVersionSource": "local"
   },
   "build": {
-    "preview": {
-      "android": {
-        "buildType": "apk"
-      },
-      "distribution": "internal"
-    },
-    "preview2": {
-      "android": {
-        "gradleCommand": ":app:assembleRelease"
-      }
-    },
-    "preview3": {
-      "android": {
-        "buildType": "apk"
-      },
-      "developmentClient": true,
-      "env": {
-        "YARN_VERSION": "4",
-        "YARN_ENABLE_INLINE_BUILDS": "true"
-      }
-    },
     "development": {
       "android": {
         "buildType": "apk"
       },
       "developmentClient": true,
       "distribution": "internal",
+      "node": "24.12.0",
       "env": {
-        "EAS_BUILD_ENABLE_COREPACK": "true",
         "EXPO_NO_FROZEN_LOCKFILE": "1",
         "YARN_VERSION": "4",
         "YARN_ENABLE_INLINE_BUILDS": "true"
@@ -46,6 +25,7 @@
       "ios": {
         "resourceClass": "medium"
       },
+      "node": "24.12.0",
       "env": {
         "YARN_VERSION": "4",
         "YARN_ENABLE_INLINE_BUILDS": "true"
@@ -57,7 +37,17 @@
       "ios": {
         "simulator": true
       },
+      "node": "24.12.0",
       "environment": "development"
     }
+  },
+
+  "submit": {
+    "production": {
+      "ios": {
+        "ascAppId": "6466960828"
+      }
+    }
   }
+
 }
