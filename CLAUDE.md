@@ -47,8 +47,8 @@ yarn install
 - `npx tsc --noEmit` - Type check without emitting files
 
 ### EAS Cloud Builds
-- Build profiles in `eas.json`: development, preview, preview2, preview3, production
-- Example: `eas build --platform android --profile preview3`
+- Build profiles in `eas.json`: development, production
+- Example: `eas build --platform android --profile development`
 - **Android Build Fix**: If EAS build fails with duplicate .so files, add to `./android/build.gradle`:
   ```gradle
   android {
